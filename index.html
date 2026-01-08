@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF → Texto | Conversor Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <h1>📄 PDF → Texto</h1>
+        <p class="subtitle">Converta seus PDFs em texto editável, rápido e gratuito.</p>
+
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="pdfInput" accept="application/pdf" hidden>
+            <p>Arraste o PDF aqui ou clique para selecionar</p>
+        </div>
+
+        <div class="info">
+            <span id="pageCount">Páginas: 0</span>
+            <span id="status">Status: aguardando arquivo...</span>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <textarea id="outputText" placeholder="O texto extraído aparecerá aqui..." readonly></textarea>
+
+        <div class="actions">
+            <button id="downloadBtn" disabled>⬇️ Baixar TXT</button>
+            <button id="clearBtn">🗑️ Limpar</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
